@@ -1,62 +1,8 @@
-# Overview:
-Build a single-page Kanban-style to-do application using ReactJs / NextJs / Vanilla Javascript.
-The application will feature multiple columns (e.g., "To Do", "In Progress", "Done") and allow
-users to manage tasks by dragging and dropping them between these columns.
-
-## Requirements:
-1. Columns and Tasks:
-   
-    a. Create at least three columns: "To Do", "In Progress", and "Done".
-  
-    b. Allow tasks to be added to any column.
-    
-    c. Tasks should be represented as cards with a title and description.
-  
-2. Task Management:
-   
-    a. Users should be able to add new tasks with a title and description.
-    
-    b. Implement functionality to edit and delete tasks.
-    
-    c. Tasks should be moveable between columns using drag-and-drop.
-  
-3. Drag-and-Drop Functionality:
-   
-    a. Implement drag-and-drop so tasks can be moved between columns.
-  
-    b. The status of a task should be updated based on the column it is dropped into.
-  
-4. State Management:
-   
-    a. Use React Context / Redux / another state management solution to manage tasks and columns.
-  
-    b. Ensure the application's state persists across page reloads.
-  
-5. Styling:
-   
-    a. Design a user-friendly interface that clearly distinguishes between different columns and tasks.
-  
-    b. Implement smooth and intuitive drag-and-drop interactions.
-  
-6. Optional Features (Bonus):
-   
-    a. Implement task filtering or searching by keyword.
-  
-    b. Add due dates to tasks and highlight overdue tasks.
-    
-    c. Allow tasks to be reordered within the same column by dragging.
-    
-    d. Functional codes preferred
-
-# Deployment
-This CRA is deployed using vercel and the URL is https://kanban-clone-kappa.vercel.app/
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Instructions for running the application (Available Scripts)
+## Available Scripts
 
 In the project directory, you can run:
 
@@ -77,6 +23,21 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 

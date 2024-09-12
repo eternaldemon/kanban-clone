@@ -50,8 +50,9 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = () => {
 
   const handleFormSubmit = (event: FormEvent) => {
     event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-    const formValues = Object.fromEntries(formData.entries());
+    const formElement = event.target as HTMLFormElement;
+    const taskId = formElement.getAttribute('data-taskid');
+    const formValues = Object.fromEntries(new FormData(formElement));
     const taskObj = {title: formValues.title, description: formValues.description || ""};
 
     // set tasks on the basis of if selectedTask has id (modifying task) or adding a whole new task
@@ -60,11 +61,17 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = () => {
     setSelectedTaskAndColumn(null);
 
     setTasks((os)=> {
-      if(currentData?.task?.id && currentData?.type){
+      if(currentData?.type && taskId){
+        if(formValues?.type && currentData.type !== formValues.type){
+          return {
+            ...os,
+            [currentData.type]: [...os[currentData.type].filter((task)=> `${task.id}` != taskId)],
+            [formValues.type as ColumnType]: [...os[formValues.type as ColumnType], {id: taskId, ...taskObj}]
+          }
+        }
         return {
           ...os,
-          [currentData.type]: [...os[currentData.type].filter((task)=> task.id !== currentData.task?.id)],
-          [formValues.type as ColumnType]: [...os[formValues.type as ColumnType], {id: currentData.task.id, ...taskObj}]
+          [currentData.type]: [...os[currentData.type].filter((task)=> `${task.id}` != taskId), {id: taskId, ...taskObj}],
         }
       }
       else {
