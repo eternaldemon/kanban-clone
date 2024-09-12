@@ -1,0 +1,44 @@
+.task-card {
+    /* border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    opacity: 1; */
+    position: relative;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ececec;
+    transform: scale(1.05);
+  }
+  
+  &:active {
+    opacity: 0.85;
+  }
+
+  .edit-button, .delete-button {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+  }
+
+  .edit-button {
+    right: 5rem;
+    top: 0;
+  }
+
+  .delete-button {
+    right: 0;
+    top: 0;
+  }
+  
+  /* .column.drag-over {
+    background-color: #e0e0e0;
+  } */
+}

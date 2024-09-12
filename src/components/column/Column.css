@@ -1,0 +1,32 @@
+.column {
+    min-height: 500px;
+
+    h2 {
+        margin: 0;
+    }
+
+    .header {
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+
+    .to-do,
+    .in-progress,
+    .done {
+        color: white;
+    }
+
+    .to-do{
+        background-color: rgb(206, 194, 32);
+    }
+    
+    .in-progress {
+        background-color: rgb(36, 162, 118);
+    }
+    
+    .done {
+        background-color: rgb(26, 104, 193);
+    }
+}
+

@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1000;
+
+  .field {
+    margin-bottom: 1.5rem;
+    text-align: start;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+  }
+}

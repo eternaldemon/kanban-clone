@@ -1,0 +1,31 @@
+.kanban {
+    text-align: start;
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .add-task-button {
+            margin: 1.5rem 0;
+        }
+
+        .field {
+            text-align: start;
+        
+            label {
+              display: block;
+              font-weight: 600;
+              color: #333;
+            }
+        }
+    }
+
+
+
+    .board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+}
